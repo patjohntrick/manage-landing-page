@@ -1,23 +1,30 @@
 import React from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import Weblogo from '../images/logo.svg'
 
-const Navigation = () => {
+const Navigation = ({toggle, navBar}) => {
   return (
-      <nav className="m-auto max-w-[70rem] flex justify-between items-center text-sm py-4 font-medium text-title">
-          <div className="logo">
+      <nav className="flex px-3 m-auto py-5 shadow-sm justify-between items-center text-title font-normal ">
+          <div className="logo w-[30%] ">
             <img src={Weblogo} alt="" />
           </div>
-          <ul className="flex w-6/12 justify-around">
-              <li>Pricing</li>
-              <li>Product</li>
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Community</li>
-          </ul>
-          <div className="other-links">
-              <ul className="text-gray-50">
-                <li className="py-2 px-4 rounded-full bg-button text-button-text shadow-md shadow-button-shadow cursor-pointer transition-all hover:shadow-lg hover:shadow-button-shadow">Get Started</li>
+          <div className="links hidden lg:flex items-center w-[70%] justify-between ">
+            <ul className="flex items-center w-[500px] justify-between ">
+                <li>Pricing</li>
+                <li>Products</li>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Community</li>
+            </ul>
+            <div>
+              <ul>
+                <li className=" bg-button text-button-text p-2 rounded-full ">Get Started</li>
               </ul>
+            </div>
+          </div>
+          <div className="lg:hidden">
+            <FaBars className={navBar ? "hidden" : "block"} onClick={toggle} />
+            <FaTimes className={navBar ? "block" : "hidden"} onClick={toggle} />
           </div>
       </nav>
   )
