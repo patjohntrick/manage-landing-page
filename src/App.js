@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FirstSection from "./components/FirstSection";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import HeroDesign from "./components/HeroDesign";
 import Navigation from "./components/Navigation";
@@ -23,6 +24,7 @@ function App() {
       <FirstSection />
       <SecondSection />
       <ThirdSection />
+      <Footer />
       {/* <HeroDesign /> */}
     </div>
   );
