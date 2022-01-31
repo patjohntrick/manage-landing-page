@@ -18,7 +18,7 @@ const Navigation = ({toggle, navBar}) => {
             </ul>
             <div>
               <ul>
-                <li className=" bg-button text-button-text p-2 rounded-full ">Get Started</li>
+                <li className=" bg-button text-button-text py-2 px-4 shadow-button-shadow shadow-md w-fit rounded-full text-sm font-semibold ">Get Started</li>
               </ul>
             </div>
           </div>
